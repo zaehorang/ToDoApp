@@ -13,3 +13,10 @@ public struct Cell {
     static let toDoTableViewCellIdentifier = "ToDoTableViewCell"
     private init() {}
 }
+
+// 엔터티 이름 (코어데이터에 저장된 객체)
+
+public struct CoreData {
+    static let modelName: String = "MemoData"
+}
+

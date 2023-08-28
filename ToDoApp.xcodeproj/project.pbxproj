@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261C1EC92A9BAE360034FAF2 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C1EC82A9BAE360034FAF2 /* ToDoCell.swift */; };
+		261C1ECF2A9C7B7D0034FAF2 /* coreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C1ECE2A9C7B7D0034FAF2 /* coreDataManager.swift */; };
+		261C1ED22A9C80390034FAF2 /* ToDoData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C1ED02A9C80390034FAF2 /* ToDoData+CoreDataClass.swift */; };
+		261C1ED32A9C80390034FAF2 /* ToDoData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C1ED12A9C80390034FAF2 /* ToDoData+CoreDataProperties.swift */; };
 		266C7EE52A99F7730078F00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C7EE42A99F7730078F00E /* AppDelegate.swift */; };
 		266C7EE72A99F7730078F00E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C7EE62A99F7730078F00E /* SceneDelegate.swift */; };
 		266C7EE92A99F7730078F00E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C7EE82A99F7730078F00E /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261C1EC82A9BAE360034FAF2 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		261C1ECE2A9C7B7D0034FAF2 /* coreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataManager.swift; sourceTree = "<group>"; };
+		261C1ED02A9C80390034FAF2 /* ToDoData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		261C1ED12A9C80390034FAF2 /* ToDoData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		266C7EE12A99F7730078F00E /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266C7EE42A99F7730078F00E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266C7EE62A99F7730078F00E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 				266C7EFD2A99F7BC0078F00E /* Models */,
 				266C7EFC2A99F7B20078F00E /* Views */,
 				266C7EFB2A99F7A30078F00E /* Controllers */,
+				266C7EEA2A99F7730078F00E /* Main.storyboard */,
 				266C7EF02A99F7740078F00E /* Assets.xcassets */,
 				266C7EF22A99F7740078F00E /* LaunchScreen.storyboard */,
 				266C7EF52A99F7740078F00E /* Info.plist */,
@@ -88,7 +97,7 @@
 		266C7EFC2A99F7B20078F00E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				266C7EEA2A99F7730078F00E /* Main.storyboard */,
+				261C1EC82A9BAE360034FAF2 /* ToDoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,6 +105,9 @@
 		266C7EFD2A99F7BC0078F00E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				261C1ED02A9C80390034FAF2 /* ToDoData+CoreDataClass.swift */,
+				261C1ED12A9C80390034FAF2 /* ToDoData+CoreDataProperties.swift */,
+				261C1ECE2A9C7B7D0034FAF2 /* coreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,8 +184,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				266C7EE92A99F7730078F00E /* ViewController.swift in Sources */,
+				261C1ED32A9C80390034FAF2 /* ToDoData+CoreDataProperties.swift in Sources */,
 				266C7EE52A99F7730078F00E /* AppDelegate.swift in Sources */,
+				261C1EC92A9BAE360034FAF2 /* ToDoCell.swift in Sources */,
 				266C7EE72A99F7730078F00E /* SceneDelegate.swift in Sources */,
+				261C1ECF2A9C7B7D0034FAF2 /* coreDataManager.swift in Sources */,
+				261C1ED22A9C80390034FAF2 /* ToDoData+CoreDataClass.swift in Sources */,
 				266C7F032A9B07450078F00E /* DetailViewController.swift in Sources */,
 				266C7F012A99F9F00078F00E /* NameSpace.swift in Sources */,
 				266C7EEF2A99F7730078F00E /* ToDoApp.xcdatamodeld in Sources */,

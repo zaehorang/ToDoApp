@@ -22,3 +22,5 @@ public struct CoreData {
 public struct Segue {
     static let name: String = "ToDoCell"
 }
+
+// 새로운 브런치 사용!!

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="225" id="H4n-cU-yiI" customClass="ToDoCell" customModule="ToDoApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="225" id="H4n-cU-yiI" customClass="ToDoCell" customModule="ToDoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H4n-cU-yiI" id="Yhf-cS-Qqn">
@@ -55,6 +55,9 @@
                                                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                             <state key="normal" title="UPDATE" image="pencil.tip" catalog="system"/>
+                                                                            <connections>
+                                                                                <action selector="updateButtonTapped:" destination="H4n-cU-yiI" eventType="touchUpInside" id="csP-BZ-f9y"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023-8-26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ6-ic-o0D">
                                                                             <rect key="frame" x="0.0" y="13" width="72.666666666666671" height="17"/>
@@ -113,7 +116,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="hb0-Tq-xim"/>
                     <connections>
-                        <segue destination="o6H-Ym-Co1" kind="show" id="fCa-PB-FgW"/>
+                        <outlet property="tableView" destination="z3g-Ph-AOw" id="aeI-Fx-YFr"/>
+                        <segue destination="o6H-Ym-Co1" kind="show" identifier="ToDoCell" id="fCa-PB-FgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,29 +135,41 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZoM-Sc-bkE">
                                 <rect key="frame" x="25" y="113" width="343" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2c-wz-c86">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2c-wz-c86">
                                         <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Red"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="o6H-Ym-Co1" eventType="touchUpInside" id="XEW-4d-XKv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLd-7g-IJy">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLd-7g-IJy">
                                         <rect key="frame" x="89.666666666666686" y="0.0" width="74.333333333333314" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Green"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="o6H-Ym-Co1" eventType="touchUpInside" id="ahf-Ob-0UL"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBj-qW-wgc">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBj-qW-wgc">
                                         <rect key="frame" x="179" y="0.0" width="74.666666666666686" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="o6H-Ym-Co1" eventType="touchUpInside" id="EyO-Q1-eNa"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEC-gC-rFh">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEC-gC-rFh">
                                         <rect key="frame" x="268.66666666666669" y="0.0" width="74.333333333333314" height="35"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Purple"/>
+                                        <connections>
+                                            <action selector="colorButtonTapped:" destination="o6H-Ym-Co1" eventType="touchUpInside" id="Eqv-bl-Hq9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -190,6 +206,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="o6H-Ym-Co1" eventType="touchUpInside" id="cNS-Pr-ifo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PSA-Xx-2yW"/>
@@ -207,6 +226,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="otJ-gE-yTm"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="Zvs-Ug-Mf8" id="9Bu-b7-iv5"/>
+                        <outlet property="blueButton" destination="yBj-qW-wgc" id="Dpo-wx-v5V"/>
+                        <outlet property="greenButton" destination="dLd-7g-IJy" id="rsx-g1-B0O"/>
+                        <outlet property="mainTextView" destination="R1s-UN-2Yp" id="dHN-gW-QXI"/>
+                        <outlet property="purpleButton" destination="aEC-gC-rFh" id="8Ge-aF-hUV"/>
+                        <outlet property="redButton" destination="l2c-wz-c86" id="hGS-Wf-vSX"/>
+                        <outlet property="saveButton" destination="T7w-PA-ace" id="SJD-d6-BmF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBC-Ld-2gz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

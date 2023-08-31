@@ -8,10 +8,10 @@
 import UIKit
 import CoreData
 
-final class coreDataManager {
+final class CoreDataManager {
     
     // 싱글톤
-    static let shared = coreDataManager()
+    static let shared = CoreDataManager()
     private init() {}
     
     // 앱 델리게이트
